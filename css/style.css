@@ -153,15 +153,8 @@ body {
   color: var(--secondary-text-color);
   text-decoration: none;
 }
-.mail:hover,
-.mail:focus {
-  color: var(--accent-color);
-}
 
-.tel:hover,
-.tel:focus {
-  color: var(--accent-color);
-}
+/**/
 
 /*скриваємо заголовок*/
 .visually-hidden {
@@ -179,6 +172,30 @@ body {
   overflow: hidden;
 }
 */
+
+.mail::before {
+  display: inline-block;
+  content: url("/img/svg/envelope.svg");
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.tel::before {
+  display: inline-block;
+  content: url("/img/svg/smartphone.svg");
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+.mail:focus,
+.mail:hover {
+  fill: #2196f3;
+}
+,
+.tel:hover,
+.tel:focus {
+  fill: #2196f3;
+}
 
 /*=============    MAIN    ==============*/
 .main {
@@ -256,6 +273,12 @@ body {
   margin-left: 30px;
 }
 
+.item-clock::before {
+  background-image: url(/img/features/clock.svg);
+  background-size: 70px;
+}
+
+/**/
 .features-item::before {
   display: block;
   content: "";
@@ -405,6 +428,51 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
+
+/*=============   regular-clients   ==============*/
+
+.regular-clients-section {
+  margin: 0 auto;
+  padding-bottom: 94px;
+  padding-top: 94px;
+    fill: chocolate;
+}
+
+.regular-clients-flex {
+  display: flex;
+
+  color: tomato
+  fill: chocolate;
+}
+
+.clients-item {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 170px;
+  height: 90px;
+  fill: chocolate;
+}
+
+.regular-clients-section .caption {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.667;
+  text-align: center;
+  color: var(--main-text-color);
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+    fill: chocolate;
+}
+
+.clients-item {
+  content: ;
+  color: red;
+  width: 20;
+  margin: 0 auto;
+}
+/*=============   SVG   ==============*/
 
 /*=============   FOOTER   ==============*/
 
