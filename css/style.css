@@ -180,6 +180,7 @@ body {
   height: 12px;
   margin-right: 10px;
 }
+
 .tel::before {
   display: inline-block;
   content: url("/img/svg/smartphone.svg");
@@ -187,11 +188,12 @@ body {
   height: 16px;
   margin-right: 10px;
 }
+
 .mail:focus,
 .mail:hover {
   fill: #2196f3;
 }
-,
+
 .tel:hover,
 .tel:focus {
   fill: #2196f3;
@@ -435,13 +437,13 @@ body {
   margin: 0 auto;
   padding-bottom: 94px;
   padding-top: 94px;
-    fill: chocolate;
+  fill: chocolate;
 }
 
 .regular-clients-flex {
   display: flex;
 
-  color: tomato
+  color: tomato;
   fill: chocolate;
 }
 
@@ -463,11 +465,11 @@ body {
   color: var(--main-text-color);
   letter-spacing: 0.03em;
   margin-bottom: 50px;
-    fill: chocolate;
+  fill: chocolate;
 }
 
 .clients-item {
-  content: ;
+  content: "";
   color: red;
   width: 20;
   margin: 0 auto;
