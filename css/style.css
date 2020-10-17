@@ -133,15 +133,18 @@ body {
   color: var(--accent-color);
 }
 
-/* Авторизація сайту */
+/* !!!!!!        Авторизація сайту       !!!!!!!*/
+
 /*задаєм лівий марджин для списку пошти і тел, крім першої (бо перша вже не міє сестринської Item)*/
-.nav-auth .auth-item + .auth-item {
-  margin-left: 50px;
-}
+
 /*переводим вертикальний список в горизонтальний і позиціонуємо його в лівий край*/
 .nav-auth {
   display: flex;
   margin-left: auto;
+}
+
+.nav-auth .auth-item + .auth-item {
+  margin-left: 50px;
 }
 
 .nav-auth a {
@@ -154,65 +157,44 @@ body {
   color: var(--secondary-text-color);
   text-decoration: none;
   align-items: center;
-  fill: rgb(0, 231, 123);
 }
 
-.auth-item .icon-auth {
-  display: flex;
-  fill: rgb(0, 231, 123);
-}
-
-.auth-item a {
-  fill: rgb(0, 231, 123);
-}
-
-.auth-item {
-width: 5;
-height: ;
-  fill: rgb(0, 231, 123);
-}
 .icon-auth {
   block-size: border-box;
-   color: var(--accent-color);
   display: flex;
   align-items: center;
   margin-right: 10px;
-  fill: red;
+  fill: var(--secondary-text-color);
 }
-.nav-auth .auth-icon {
- color: var(--accent-color);
-  align-items: center;
-  margin-right: 10px;
-  fill: red;
-}
-.ico-email {
-  fill: rgb(0, 231, 123);
-}
-.icon-auth:hover .auth-icon {
+
+.auth-item:hover .icon-auth {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.icon-auth:hover .email {
+.auth-item:hover .mail {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.icon-auth:hover .tel {
+.auth-item:hover .tel {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.mail:focus,
-.mail:hover {
-  fill: #2196f3;
+.mail:focus {
+  color: var(--accent-color);
 }
 
-.tel:hover,
+.mail:focus .icon-auth {
+  fill: var(--accent-color);
+}
 .tel:focus {
-  fill: #2196f3;
+  color: var(--accent-color);
 }
 
-/**/
+.tel:focus .icon-auth {
+  fill: var(--accent-color);
+}
 
 /*скриваємо заголовок*/
 .visually-hidden {
@@ -294,13 +276,12 @@ height: ;
   text-align: center;
   text-decoration: none;
 
-  background-color: var(--accent-color);
   color: var(--white-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Секція особливості*/
@@ -410,14 +391,13 @@ height: ;
   margin-right: 30px;
 }
 .section-ourwork .headline {
-  font-weight: 700;
   margin-top: 0px;
   margin-bottom: 50px;
   color: var(--primary-text-color);
   text-align: center;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.667;
+  line-height: 1.167;
   letter-spacing: 0.03em;
 }
 
@@ -450,7 +430,7 @@ height: ;
 .section-ourteam .caption {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.667;
+  line-height: 1.167;
   text-align: center;
   color: var(--main-text-color);
   letter-spacing: 0.03em;
@@ -479,6 +459,42 @@ height: ;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.container-social-list {
+  margin-bottom: 30px;
+}
+.social-list {
+  display: flex;
+}
+.social-list.list {
+  width: 206px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+}
+
+.social-list__svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.social-list__link:hover {
+  background-color: var(--accent-color);
+}
+
+.social-list__svg:hover {
+  fill: var(--white-color);
 }
 
 /*=============   regular-clients   ==============*/
@@ -492,7 +508,7 @@ height: ;
 .regular-clients-section .caption {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.667;
+  line-height: 1.167;
   text-align: center;
   color: var(--main-text-color);
   letter-spacing: 0.03em;
@@ -502,36 +518,38 @@ height: ;
   display: flex;
 }
 
-.icon {
-  color: rgb(104, 182, 81));
+.icon-regular {
   box-sizing: border-box;
   width: 170px;
   margin: 0 auto;
-  fill: #ff715b;
+  fill: #afb1b8;
 }
 
-.clients-item:hover .icon,
-.clients-item:focus .icon{
-  fill: var(--accent-color);
-}
 .clients-item {
   display: flex;
   align-items: center;
   margin: 0 auto;
   width: 170px;
   height: 90px;
-  fill: chocolate;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
 }
+/* !!!  вище треба прописати мінусовий -15 margin  !!!*/
 .clients-item {
   width: calc((100% - 5 * 30px) / 6);
+  margin-right: 30px;
 }
 
-.clients-item .icon {
-  color: blue;
-  fill: yellowgreen;
+.clients-item:hover .icon-regular {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+  border-color: #2196f3;
+}
+.clients-item:hover {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+  border-color: #2196f3;
 }
 
 /*=============   SVG   ==============*/
@@ -583,6 +601,10 @@ height: ;
   letter-spacing: 0.03em;
 }
 
+.adress-footer p {
+  margin-bottom: 9px;
+}
+
 .adress-footer a {
   font-style: normal;
   font-weight: 400;
@@ -591,6 +613,7 @@ height: ;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  margin-bottom: 50px;
 }
 
 .mail:hover,
@@ -601,6 +624,41 @@ height: ;
 .tel:hover,
 .tel:focus {
   color: var(--accent-color);
+}
+
+.footer-social-list {
+  margin-bottom: 30px;
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-social-list.list {
+  width: 206px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.footer-social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-social-list__svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-color);
+}
+
+.footer-social-list__link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-social-list__svg:hover {
+  fill: var(--white-color);
 }
 
 /*=====================    Портфоліо    =====================*/
