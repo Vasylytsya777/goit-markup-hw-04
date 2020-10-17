@@ -176,7 +176,6 @@ height: ;
    color: var(--accent-color);
   display: flex;
   align-items: center;
-  outline: 2px solid red;
   margin-right: 10px;
   fill: red;
 }
@@ -189,16 +188,16 @@ height: ;
 .ico-email {
   fill: rgb(0, 231, 123);
 }
-.auth-item:hover .auth-icon {
+.icon-auth:hover .auth-icon {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.auth-item:hover .email {
+.icon-auth:hover .email {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.auth-item:hover .tel {
+.icon-auth:hover .tel {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -508,13 +507,12 @@ height: ;
   box-sizing: border-box;
   width: 170px;
   margin: 0 auto;
-  outline: 2px solid red;
   fill: #ff715b;
 }
 
-.icon:hover,
-.icon:focus {
-  fill: #ff715b;
+.clients-item:hover .icon,
+.clients-item:focus .icon{
+  fill: var(--accent-color);
 }
 .clients-item {
   display: flex;
