@@ -246,7 +246,7 @@ body {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("/img/herobg/herobg.jpg");
+    url("./img/herobg/herobg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
