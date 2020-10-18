@@ -560,30 +560,36 @@ body {
   display: block;
   background-color: var(--main-footer-background-color);
   align-content: center;
-}
-/* ось тут почав писати для футера*/
-/*
+
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.container-footer {
+  display: block;
+  display: flex;
+  box-sizing: border-box;
+  align-content: center;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
-*/
-.container-footer {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 231px;
-  margin-right: 70px;
 }
 
 /**/
 
 /* Підвал сторінки логотип */
 
+.adress-footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 .webstudio-footer {
+  display: inline-block;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -593,11 +599,12 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-.adress-footer {
-  margin-top: 20px;
+.adress {
+  display: inline-block;
+  width: 231px;
 }
 
-.adress-footer .white {
+.adress .white {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -606,11 +613,11 @@ body {
   letter-spacing: 0.03em;
 }
 
-.adress-footer p {
-  margin-bottom: 9px;
+.adress p + p {
+  margin-top: 8px;
 }
 
-.adress-footer a {
+.adress a {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -618,13 +625,14 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  margin-bottom: 50px;
 }
 
 .footer-social-list {
   display: block;
   align-content: center;
   margin-top: 15px;
+
+  margin-left: 70px;
 }
 
 .footer-social-list h3 {
