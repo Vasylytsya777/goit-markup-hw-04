@@ -242,7 +242,7 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: url("./img/herobg/herobg.jpg"),
+  background-image: url("../img/herobg/herobg.jpg"),
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
@@ -633,7 +633,7 @@ body {
 
 .footer-social-list h3 {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.03em;
