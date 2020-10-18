@@ -489,11 +489,13 @@ body {
   fill: #afb1b8;
 }
 
-.social-list__link:hover {
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-list__svg:hover {
+.social-list__link:hover .social-list__svg,
+.social-list__link:focus .social-list__svg {
   fill: var(--white-color);
 }
 
@@ -536,18 +538,23 @@ body {
   border-radius: 4px;
 }
 /* !!!  вище треба прописати мінусовий -15 margin  !!!*/
-.clients-item {
+.clients-item-list {
   width: calc((100% - 5 * 30px) / 6);
   margin-right: 30px;
 }
 
 .clients-item:hover .icon-regular {
   fill: var(--accent-color);
+}
+.clients-item:hover {
   color: var(--accent-color);
   border-color: #2196f3;
 }
-.clients-item:hover {
+
+.clients-item:focus .icon-regular {
   fill: var(--accent-color);
+}
+.clients-item:focus {
   color: var(--accent-color);
   border-color: #2196f3;
 }
@@ -616,16 +623,6 @@ body {
   margin-bottom: 50px;
 }
 
-.mail:hover,
-.mail:focus {
-  color: var(--accent-color);
-}
-
-.tel:hover,
-.tel:focus {
-  color: var(--accent-color);
-}
-
 .footer-social-list {
   margin-bottom: 30px;
 }
@@ -659,6 +656,10 @@ body {
 
 .footer-social-list__svg:hover {
   fill: var(--white-color);
+}
+
+.footer-social-list__link:focus {
+  background-color: var(--accent-color);
 }
 
 /*=====================    Портфоліо    =====================*/
