@@ -242,11 +242,8 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("/img/herobg/herobg.jpg");
+  background-image: url("/img/herobg/herobg.jpg"),
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -307,7 +304,7 @@ body {
 }
 
 .item-clock::before {
-  background-image: url(/img/features/clock.svg);
+  background-image: url(../img/features/clock.svg);
   background-size: 70px;
 }
 
@@ -324,22 +321,22 @@ body {
 }
 
 .item-antenna::before {
-  background-image: url(/img/features/antenna.svg);
+  background-image: url(../img/features/antenna.svg);
   background-size: 70px;
 }
 
 .item-clock::before {
-  background-image: url(/img/features/clock.svg);
+  background-image: url(../img/features/clock.svg);
   background-size: 70px;
 }
 
 .item-diagram::before {
-  background-image: url(/img/features/diagram.svg);
+  background-image: url(../img/features/diagram.svg);
   background-size: 70px;
 }
 
 .item-astronaut::before {
-  background-image: url(/img/features/astronaut.svg);
+  background-image: url(../img/features/astronaut.svg);
   background-size: 70px;
 }
 
@@ -567,13 +564,9 @@ body {
 
 .footer {
   display: flex;
-  align-items: baseline;
   background-color: var(--main-footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.container-footer {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -581,10 +574,19 @@ body {
   margin-right: auto;
   margin: 0 auto;
 }
+/* ось тут почав писати для футера*/
+.container-footer {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 231px;
+
+  margin-right: 70px;
+}
 
 /**/
 
 /* Підвал сторінки логотип */
+
 .webstudio-footer {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -624,16 +626,17 @@ body {
 }
 
 .footer-social-list {
-  margin-bottom: 30px;
-}
-.footer-social-list {
-  display: flex;
+  display: block;
+  align-content: center;
+  outline: 2px solid red;
 }
 .footer-social-list.list {
+  display: flex;
   width: 206px;
   margin: 0 auto;
   justify-content: space-between;
 }
+
 .footer-social-list__link {
   display: flex;
   justify-content: center;
