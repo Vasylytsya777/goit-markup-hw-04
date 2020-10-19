@@ -58,13 +58,14 @@ body {
   background-color: var(--white-color);
   font-family: Roboto, sans-serif;
   margin: 0 auto;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   /* Установит стили нинжней рамки */
-  border-bottom: 1px solid #ececec;
+
   /*justify-content: space-between;*/
 }
 
